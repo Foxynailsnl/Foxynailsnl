@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foxynails | Nagelstudio in Veenendaal — Gellak &amp; Biab</title>
+<meta name="description" content="Foxynails is een nagelstudio in Veenendaal, gerund door Elvira Vos. Gespecialiseerd in gellak, Biab en Russian manicure. Boek eenvoudig je afspraak.">
+
+<!-- Local SEO structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "Foxynails",
+  "image": "",
+  "description": "Nagelstudio in Veenendaal, gespecialiseerd in gellak, Biab en Russian manicure.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Veenendaal",
+    "addressCountry": "NL"
+  },
+  "url": "https://www.foxynails.nl",
+  "sameAs": ["https://www.instagram.com/foxynails.nl"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"] }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Work+Sans:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --forest:#1E3B2E;
+    --forest-light:#33513F;
+    --gold:#B99A5B;
+    --gold-soft:#D9C79A;
+    --cream:#F7F4EE;
+    --marble:#EDE8DF;
+    --blush:#E7B9B3;
+    --ink:#26251F;
+    --ink-soft:#5B594F;
+    --radius:2px;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Work Sans', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    font-weight:400;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    color:var(--forest);
+    letter-spacing:.01em;
+  }
+  .script{font-family:'Parisienne', cursive; font-weight:400;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.72rem;
+    color:var(--gold);
+    font-weight:600;
+  }
+
+  /* gold diagonal signature — echoes Foxynails' own story-highlight motif */
+  .gold-diag{
+    position:absolute; inset:0; overflow:hidden; pointer-events:none;
+  }
+  .gold-diag::before{
+    content:"";
+    position:absolute;
+    top:-10%; left:-15%;
+    width:160%; height:2px;
+    background:linear-gradient(90deg, transparent, var(--gold) 35%, var(--gold) 65%, transparent);
+    transform:rotate(-24deg);
+  }
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(247,244,238,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(30,59,46,.08);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:82px;
+  }
+  .logo{
+    display:flex; align-items:center;
+  }
+  .logo img{height:42px; width:auto; display:block;}
+  .navlinks{display:flex; gap:38px; align-items:center;}
+  .navlinks a{
+    font-size:.85rem; letter-spacing:.04em; color:var(--ink);
+    position:relative; padding:6px 0;
+  }
+  .navlinks a::after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:1px;
+    background:var(--gold); transition:width .3s ease;
+  }
+  .navlinks a:hover::after{width:100%;}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .burger span{width:26px; height:2px; background:var(--forest);}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:96px 0 110px;
+    background:
+      radial-gradient(circle at 85% 10%, rgba(185,154,91,.10), transparent 45%),
+      var(--cream);
+    overflow:hidden;
+  }
+  .hero-wrap{
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    max-width:640px;
+  }
+  .hero .eyebrow{margin-bottom:18px; display:block;}
+  .hero-empty{height:44px;}
+  .btn-row{display:flex; gap:18px; flex-wrap:wrap; justify-content:center;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:15px 30px; font-size:.85rem; letter-spacing:.05em;
+    border-radius:var(--radius); border:1px solid transparent;
+    transition:all .25s ease; cursor:pointer;
+  }
+  .btn-primary{background:var(--forest); color:var(--cream);}
+  .btn-primary:hover{background:var(--forest-light);}
+  .btn-ghost{border-color:var(--forest); color:var(--forest);}
+  .btn-ghost:hover{background:var(--forest); color:var(--cream);}
+
+  /* SECTION generic */
+  section{padding:110px 0;}
+  .section-head{max-width:620px; margin:0 auto 60px; text-align:center;}
+  .section-head .eyebrow{display:block; margin-bottom:14px;}
+  .section-head h2{font-size:clamp(2rem,3.4vw,2.7rem);}
+  .divider{
+    width:64px; height:1px; background:var(--gold); margin:20px auto 0;
+  }
+
+  /* OVER MIJ */
+  .about{background:var(--marble); position:relative;}
+  .about .wrap{
+    display:grid; grid-template-columns:.95fr 1.05fr; gap:56px; align-items:center;
+  }
+  .about-media{display:flex; flex-direction:column; gap:16px;}
+  .about-photo{
+    position:relative; aspect-ratio:3/4; max-width:400px;
+    overflow:hidden; border-radius:var(--radius);
+  }
+  .about-photo img{width:100%; height:100%; object-fit:cover;}
+  .about-small-photos{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:400px;
+  }
+  .about-small-photos .photo-slot{
+    aspect-ratio:4/5; overflow:hidden; border-radius:var(--radius); padding:0;
+  }
+  .about-small-photos .photo-slot img{width:100%; height:100%; object-fit:cover;}
+  .photo-slot{
+    width:100%; height:100%;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    flex-direction:column; gap:10px; padding:16px;
+  }
+  .photo-slot span{font-size:.7rem; color:var(--ink-soft); letter-spacing:.02em; max-width:180px;}
+  .photo-slot svg{width:32px;height:32px; color:rgba(30,59,46,.3); stroke-width:1;}
+  .about-text .eyebrow{margin-bottom:16px;}
+  .about-name{
+    font-family:'Work Sans', sans-serif; font-weight:600; font-size:1.15rem;
+    color:var(--ink); margin-bottom:2px;
+  }
+  .about-role{
+    font-size:.95rem; color:var(--ink-soft); font-style:italic; margin-bottom:22px;
+  }
+  .about-text p{color:var(--ink-soft); margin-bottom:18px; max-width:520px;}
+  .signature{
+    font-family:'Parisienne', cursive; font-size:1.7rem; color:var(--forest);
+    margin-top:22px;
+  }
+
+  /* GALERIJ */
+  .gallery{background:var(--marble);}
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:6px;
+  }
+  .g-item{
+    aspect-ratio:1; position:relative; overflow:hidden; background:var(--marble);
+  }
+  .g-item img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform .5s ease;
+  }
+  .g-item:hover img{transform:scale(1.05);}
+
+  /* BOEKEN */
+  .booking{
+    background:var(--forest); color:var(--cream); position:relative; overflow:hidden;
+  }
+  .booking .gold-diag::before{top:15%; opacity:.5;}
+  .booking .wrap{position:relative; text-align:center; max-width:680px;}
+  .booking .eyebrow{color:var(--gold-soft);}
+  .booking h2{color:var(--cream); margin-bottom:20px;}
+  .booking p{color:rgba(247,244,238,.8); margin-bottom:38px;}
+  .booking .btn-primary{background:var(--gold); color:var(--forest);}
+  .booking .btn-primary:hover{background:var(--gold-soft);}
+  .booking .btn-ghost{border-color:rgba(247,244,238,.5); color:var(--cream);}
+  .booking .btn-ghost:hover{background:rgba(247,244,238,.12);}
+  .opening-hours{
+    margin-top:56px; max-width:380px; margin-left:auto; margin-right:auto;
+    text-align:left; border-top:1px solid rgba(247,244,238,.2); padding-top:26px;
+  }
+  .opening-hours h4{
+    font-family:'Cormorant Garamond',serif; color:var(--gold-soft); font-size:1.05rem;
+    font-weight:500; letter-spacing:.02em; margin-bottom:14px; text-align:center;
+  }
+  .oh-row{
+    display:flex; justify-content:space-between; font-size:.88rem;
+    padding:8px 0; color:rgba(247,244,238,.8);
+    border-bottom:1px solid rgba(247,244,238,.1);
+  }
+  .oh-row:last-child{border-bottom:none;}
+
+  .rules{
+    margin-top:40px; text-align:left; background:rgba(247,244,238,.06);
+    border:1px solid rgba(247,244,238,.15); padding:30px 34px;
+    font-size:.85rem; color:rgba(247,244,238,.75);
+  }
+  .rules h4{
+    font-family:'Cormorant Garamond',serif; color:var(--gold-soft); font-size:1.15rem;
+    margin-bottom:14px; font-weight:500;
+  }
+  .rules ul{padding-left:18px;}
+  .rules li{margin-bottom:8px;}
+
+  /* FOOTER */
+  footer{padding:80px 0 40px; background:var(--ink); color:rgba(247,244,238,.75);}
+  .foot-grid{
+    display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:50px; margin-bottom:60px;
+  }
+  .foot-grid-2{grid-template-columns:1fr 1fr; max-width:600px;}
+  .foot-grid h5{
+    font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.05rem;
+    margin-bottom:18px; letter-spacing:.02em;
+  }
+  .foot-grid p, .foot-grid a{font-size:.88rem; line-height:2; color:rgba(247,244,238,.65);}
+  .foot-grid a:hover{color:var(--gold-soft);}
+  .cert-list{display:flex; flex-direction:column; gap:10px;}
+  .cert-list a{
+    font-size:.85rem; display:flex; align-items:center; gap:8px;
+    text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(247,244,238,.3);
+  }
+  .cert-list a:hover{text-decoration-color:var(--gold-soft);}
+  .foot-bottom{
+    border-top:1px solid rgba(247,244,238,.12); padding-top:28px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:.78rem; color:rgba(247,244,238,.45);
+  }
+
+  /* Mobile menu panel — deliberately a sibling of <header>, not nested inside it,
+     since Safari mishandles position:fixed children of a position:sticky ancestor. */
+  .mobile-menu{
+    display:none;
+  }
+
+  /* MOBILE */
+  @media (max-width:880px){
+    .navlinks{display:none;}
+    .mobile-menu{
+      display:flex; flex-direction:column; gap:28px;
+      position:fixed; top:0; left:0; right:0; bottom:0;
+      padding:118px 32px 40px;
+      background-color:#F7F4EE;
+      z-index:9999;
+      transform:translateX(100%);
+      transition:transform .3s ease;
+    }
+    .mobile-menu.open{transform:translateX(0);}
+    .mobile-menu-close{
+      position:absolute; top:30px; right:30px;
+      width:auto; height:auto;
+      background:none; border:none;
+      color:var(--forest); font-size:1.7rem; line-height:1; font-weight:300;
+      cursor:pointer; padding:4px;
+    }
+    .mobile-menu a{font-size:1.1rem; color:var(--ink); letter-spacing:.02em;}
+    .burger{display:flex; z-index:10000; position:relative;}
+    .hero{padding:60px 0 90px;}
+    .about .wrap{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr; gap:36px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">
+      <img src="assets/Foxynails.png" alt="Foxynails logo">
+    </a>
+    <div class="navlinks" id="navlinks">
+      <a href="#over-mij">Over mij</a>
+      <a href="assets/prijslijst.jpg" target="_blank" rel="noopener">Prijslijst</a>
+      <a href="#galerij">Galerij</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Sluit menu">&times;</button>
+  <a href="#over-mij">Over mij</a>
+  <a href="assets/prijslijst.jpg" target="_blank" rel="noopener">Prijslijst</a>
+  <a href="#galerij">Galerij</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-wrap">
+      <div class="hero-text">
+        <span class="eyebrow">Nagelstudio · Veenendaal</span>
+        <div class="hero-empty"></div>
+        <div class="btn-row">
+          <a href="#boeken" class="btn btn-primary">Boek een afspraak</a>
+          <a href="assets/prijslijst.jpg" class="btn btn-ghost" target="_blank" rel="noopener">Bekijk prijslijst</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVER MIJ -->
+  <section class="about" id="over-mij">
+    <div class="wrap">
+      <div class="about-media">
+        <div class="about-photo">
+          <img src="assets/gallery/portret.jpg" alt="Portretfoto van Elvira, eigenaresse van Foxynails">
+        </div>
+        <div class="about-small-photos">
+          <div class="photo-slot small"><img src="assets/gallery/gereedschap.jpg" alt="Nageltools van Foxynails op een gouden dienblad"></div>
+          <div class="photo-slot small"><img src="assets/gallery/stoelen.jpg" alt="Zithoek bij Foxynails met groene fauteuil en bijzettafels"></div>
+          <div class="photo-slot small"><img src="assets/gallery/armsteun.jpg" alt="UV-lamp van Foxynails voor het uitharden van gellak"></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">Wie ben ik</span>
+        <h2 class="about-name">Elvira Vos</h2>
+        <p class="about-role">het gezicht achter Foxynails</p>
+        <p>Wat begon tijdens corona als een hobby met gellak op mijn eigen nagels, groeide uit tot mijn eigen nagelstudio. Tijdens mijn opleiding tot Creatief DTP'er ontstond de naam Foxynails voor een opdracht. Inmiddels ben ik alweer ruim drie jaar met heel veel plezier bezig met mijn eigen bedrijf.</p>
+        <p>Wat ik het allerleukste vind aan mijn werk? De gezelligheid en het contact met mijn klanten. Mijn doel is dat iedereen tevreden en met een goed gevoel de deur uit gaat.</p>
+        <p>Bij Foxynails kun je daarom rekenen op persoonlijke aandacht, een gezellige sfeer en natuurlijk nagels waar je blij van wordt.</p>
+        <div class="signature">Elvira</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALERIJ -->
+  <section class="gallery" id="galerij">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Galerij</span>
+        <h2>Recent werk</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="g-item"><img src="assets/gallery/nagels1.jpeg" alt="Nagelwerk Foxynails 1" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels2.jpeg" alt="Nagelwerk Foxynails 2" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels3.jpeg" alt="Nagelwerk Foxynails 3" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels4.jpeg" alt="Nagelwerk Foxynails 4" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels5.jpeg" alt="Nagelwerk Foxynails 5" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels6.jpeg" alt="Nagelwerk Foxynails 6" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels7.jpeg" alt="Nagelwerk Foxynails 7" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels8.jpeg" alt="Nagelwerk Foxynails 8" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels9.jpeg" alt="Nagelwerk Foxynails 9" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels10.jpeg" alt="Nagelwerk Foxynails 10" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels11.jpeg" alt="Nagelwerk Foxynails 11" loading="lazy"></div>
+        <div class="g-item"><img src="assets/gallery/nagels12.jpeg" alt="Nagelwerk Foxynails 12" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOEKEN -->
+  <section class="booking" id="boeken">
+    <div class="gold-diag"></div>
+    <div class="wrap">
+      <span class="eyebrow">Afspraak maken</span>
+      <h2>Klaar voor mooie nagels?</h2>
+      <div class="btn-row" style="justify-content:center;">
+        <a href="https://wa.me/31615723850" class="btn btn-primary" target="_blank" rel="noopener">Stuur een WhatsApp</a>
+        <a href="mailto:info@foxynails.nl" class="btn btn-ghost">Stuur een e-mail</a>
+      </div>
+
+      <div class="opening-hours">
+        <h4>Openingstijden</h4>
+        <div class="oh-row"><span>Maandag &amp; dinsdag</span><span>09.00 – 21.30</span></div>
+        <div class="oh-row"><span>Woensdag &amp; donderdag</span><span>09.00 – 17.30</span></div>
+      </div>
+
+      <div class="rules">
+        <h4>Huisregels</h4>
+        <ul>
+          <li>Alleen biab/gellak op de natuurlijke nagel, geen verlenging.</li>
+          <li>Heb je nog gellak/biab van een andere salon? Meld dit bij het maken van de afspraak.</li>
+          <li>Vermeld voor welke behandeling je komt (gellak, biab, nailart, set verwijderen, etc.).</li>
+          <li>Afspraak annuleren? Doe dit 24 uur van tevoren, anders wordt de helft van de kosten in rekening gebracht.</li>
+          <li>Bij een no-show wordt het volledige bedrag in rekening gebracht.</li>
+          <li>Minimale leeftijd: 16 jaar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid foot-grid-2">
+      <div>
+        <h5>Contact</h5>
+        <p><a href="mailto:info@foxynails.nl">info@foxynails.nl</a></p>
+        <p><a href="https://wa.me/31615723850" target="_blank" rel="noopener">+31 6 15723850</a></p>
+        <p>Socials: <a href="https://www.instagram.com/foxynails.nl" target="_blank" rel="noopener">Foxynails.nl</a></p>
+        <p>3903ES, Veenendaal</p>
+      </div>
+      <div>
+        <h5>Certificaten</h5>
+        <div class="cert-list">
+          <a href="assets/Certificaat 2023.pdf" target="_blank" rel="noopener">✓ NN treatment &amp; Russian manicure</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Foxynails — Nagelstudio Veenendaal</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuClose = document.getElementById('mobileMenuClose');
+  burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+</script>
+
+</body>
+</html>
